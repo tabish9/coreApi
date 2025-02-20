@@ -1,0 +1,33 @@
+{
+    "name": "Launch .NET API",
+    "type": "coreclr",
+    "request": "launch",
+    "program": "${workspaceFolder}/bin/Debug/net8.0/MyApi.dll",
+    "args": [],
+    "cwd": "${workspaceFolder}",
+    "stopAtEntry": false,
+    "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "\\bNow listening on:\\s+(https?://\\S+)"
+    },
+    "env": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+    },
+    "sourceFileMap": {
+        "/Users": "${workspaceFolder}"
+    },
+    "configurations": [
+        
+        {
+            "name": "C#: <project-name> Debug",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/<relative-path-to-project-folder><project-name>.csproj"
+        },
+    {
+        "name": ".NET Core Attach",
+        "type": "coreclr",
+        "request": "attach"
+    }
+    ]
+}
